@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+import {WebcamModule} from 'ngx-webcam';
+import { HttpClientModule } from '@angular/common/http';
+import {HttpService} from '../../http.service';
 import {
   NbActionsModule,
   NbButtonModule,
@@ -35,6 +38,8 @@ import { FormsModule as ngFormsModule } from '@angular/forms';
     NbSelectModule,
     NbIconModule,
     ngFormsModule,
+    WebcamModule,
+    HttpClientModule,
   ],
   declarations: [
     FormsComponent,
@@ -43,5 +48,8 @@ import { FormsModule as ngFormsModule } from '@angular/forms';
     FormLayoutsComponent,
     DatepickerComponent,
   ],
+  providers: [
+    HttpService
+  ]
 })
 export class FormsModule { }
